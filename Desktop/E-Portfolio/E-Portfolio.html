@@ -10,6 +10,15 @@
       src="https://kit.fontawesome.com/e91ac03bad.js"
       crossorigin="anonymous"
     ></script>
+    <script src="index.js"></script>
+    <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@5/dist/email.min.js">
+    </script>
+    <script type="text/javascript">
+      (function () {
+        emailjs.init("76cgTwD8do1klAgui");
+      })();
+    </script>
   </head>
 
   <body>
@@ -98,14 +107,80 @@
           </figure>
         </div>
       </div>
-      <a href="#">
-        <button class="mail__btn click">
-          <i class="fa-regular fa-envelope"></i>
-        </button>
-      </a>
+      <button class="mail__btn click">
+        <i class="fa-regular fa-envelope"></i>
+      </button>
       <a href="#projects" class="scroll">
-        <div class="" scroll__icon click></div>
+        <div class="scroll__icon click"></div>
       </a>
+      <div class="modal">
+        <div class="modal__hald modal__about">
+          <h3 class="modal__title modal__title--about">
+            Here's a bit about me.
+          </h3>
+          <h4 class="modal__sub-title modal__sub-title--about">
+            Frontend Software Engineer
+          </h4>
+          <p class="modal__para">
+            I'm a 24-year-old frontend software engineer who enjoys creating and
+            designing websites.
+            <br />
+            I look to make the user experience great for each site and strive to
+            meet the needs of my clients.
+          </p>
+          <div class="modal__languages">
+            <figure class="modal__language">
+              <img class="modal__language--img" src="./E-Portfolio assets/174854.png"/>
+              <span class="lang__name">HTML</span>
+            </figure>
+            <figure class="modal__language">
+              <img class="modal__language--img" src="./E-Portfolio assets/CSS3_logo.svg.webp"/>
+              <span class="lang__name">CSS</span>
+            </figure>
+            <figure class="modal__language">
+              <img class="modal__language--img" src="./E-Portfolio assets/javascript-logo.png">
+              <span class="lang__name">JavaScript</span>
+            </figure>
+            <figure class="modal__language">
+              <img class="modal__language--img" src="./E-Portfolio assets/React-icon.svg.webp"/>
+              <span class="lang__name">React</span>
+            </figure>
+          </div>
+        </div>
+        <div class="modal__half modal__contact">
+            <h3 class="modal__title modal__title--contact">
+              Let's have a chat!
+            </h3>
+            <h4 class="modal__sub-title modal__sub-title--contact">
+              I'm currently open to new opportunities.
+            </h4>
+            <form id="contact__form" onsubmit="contact(event)">
+              <div class="form__item">
+                <label class="form__item--label">Name</label>
+                <input class="input" name="user_name" type="text"></input>
+              </div>
+              <div class="form__item">
+                <label class="form__item--label">Email</label>
+                <input class="input" name="user_email" type="email"></input>
+              </div>
+              <div class="form__item">
+                <label class="form__item--label">Message</label>
+                <textarea class="input" name="message" type="text"></textarea>
+              </div>
+              <button id="contact__sumbit" class="form__submit">
+                Send it my way
+              </button>
+            </form>
+            <div class="modal__overlay modal__overlay--loading">
+              <i class="fa-solid fa-spinner"></i>
+            </div>
+            <div class="modal__overlay modal__overlay--success">
+              Thanks for the message! Looking forward to speaking to you soon.
+            </div>
+          </div>
+          <i class="fa-solid fa-x modal__exit click"></i>
+        </div>
+      </div>
     </section>
     <section id="languages">
       <div class="container">
